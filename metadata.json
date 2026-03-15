@@ -1,0 +1,7 @@
+{
+  "name": "KEL CONTROLE DE ESTOQUE ",
+  "description": "Aplicativo para controle de estoque de merenda escolar com leitura de código de barras.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
