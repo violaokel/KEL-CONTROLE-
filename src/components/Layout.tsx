@@ -8,7 +8,6 @@ import {
   List,
   History,
   FileText,
-  LogOut,
   PlusCircle,
   Settings,
   Users,
@@ -16,7 +15,7 @@ import {
 import { cn } from "../lib/utils";
 
 export default function Layout() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const location = useLocation();
 
   const navItems = [
@@ -41,12 +40,6 @@ export default function Layout() {
           <Package className="w-6 h-6" />
           <h1 className="text-lg font-bold">MerendaEscolar</h1>
         </div>
-        <button
-          onClick={logout}
-          className="p-2 hover:bg-emerald-700 rounded-full transition-colors"
-        >
-          <LogOut className="w-5 h-5" />
-        </button>
       </header>
 
       {/* Sidebar (Desktop) */}
@@ -85,15 +78,6 @@ export default function Layout() {
             );
           })}
         </nav>
-        <div className="p-4 border-t border-emerald-600">
-          <button
-            onClick={logout}
-            className="flex items-center gap-3 w-full px-4 py-3 text-emerald-100 hover:bg-emerald-600 hover:text-white rounded-lg transition-colors"
-          >
-            <LogOut className="w-5 h-5" />
-            Sair
-          </button>
-        </div>
       </aside>
 
       {/* Main Content */}
